@@ -3,25 +3,48 @@
   <meta charset="utf-8">
   <title>New Tab</title>
   <style>
-    div {
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 12%;
       color: #ccc;
-      text-align: center;
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 800%;
     }
 
-    div:focus {
-      outline: none;
-      color: #555;
+    p {
+      margin: 0 0 20px 0;
+    }
+
+    #emoticons {
+      font: 500%/1.1 'Helvetica Neue', sans-serif;
+    }
+
+    #quote {
+      margin-top: -40px;
+      font: italic 48px/1.2 Georgia, serif;
+    }
+
+    #quote a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #quote small {
+      font-size: 36px;
+    }
+
+    .no-wrap {
+      white-space: nowrap;
     }
   </style>
  </head>
  <body>
-  <div style="height: 35%;"></div>
-  <div id="x" contenteditable></div>
+  <div id="emoticons"></div>
+  <div id="quote"></div>
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="emoticons.js"></script>
+  <!-- <script src="emoticons.js"></script> -->
+  <script src="quote.js"></script>
  </body>
 </html>
 
