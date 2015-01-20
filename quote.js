@@ -1,5 +1,6 @@
 (function () {
-	jQuery.get('http://api.theysaidso.com/qod?category=inspire', function (data, textStatus) {
+	var qodURL = 'http://api.theysaidso.com/qod?category=inspire&v=' + (new Date().toISOString().substr(0, 10));
+	jQuery.get(qodURL, function (data, textStatus) {
 		var $x = document.querySelector('#quote');
 		$x.innerHTML = [
 			'<p>',
