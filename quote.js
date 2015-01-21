@@ -22,7 +22,7 @@ jQuery.get(qodURL, function (data, textStatus) {
 	$x.innerHTML = [
 		'<p>',
 			'<a href="http://theysaidso.com/quote/' + data.contents.id + '">',
-				'“' + smartQuotes(data.contents.quote) + '”',
+				smartQuotes(data.contents.quote),
 			'</a>',
 		'</p>',
 		'<small class="no-wrap">',
