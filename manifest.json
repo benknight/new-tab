@@ -1,10 +1,15 @@
 {
-	"name": "Emoticon New Tab Page",
+	"name": "Custom New Tab Page",
 	"description": "Override the new tab page with this one",
 	"version": "0.1",
 	"incognito": "split",
 	"chrome_url_overrides": {
 		"newtab": "blank.html"
 	},
-	"manifest_version": 2
+	"manifest_version": 2,
+	"permissions": [
+		"https://www.goodreads.com/",
+		"http://api.theysaidso.com/",
+		"http://www.reddit.com/"
+	]
 }

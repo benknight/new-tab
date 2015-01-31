@@ -10,47 +10,99 @@
 		}
 
 		body {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 0 12%;
+			position: relative;
+			margin: 0;
+			font-size: 48px;
+			font-kerning: normal;
+			line-height: 1.2;
 			color: #ccc;
 		}
 
 		p {
-			margin: 0 0 20px 0;
+			margin: 20px 0;
 		}
 
-		#emoticons {
-			font: 72px/1.1 'Helvetica Neue', sans-serif;
+		#quote-0 {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
 		}
 
-		#quote {
-			margin-top: -40px;
-			font: 48px/1.2 Baskerville, serif;
+		#quote-1 {
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			transform: translateY(-52%);
 		}
 
-		#quote a {
+		#quote-2 {
+			position: absolute;
+			top: 50%;
+			left: 200%;
+			transform: translateY(-50%);
+		}
+
+		.quote {
+			box-sizing: border-box;
+			width: 100%;
+			padding: 0 12%;
+			font-family: Baskerville, serif;
+		}
+
+		.quote a {
 			color: inherit;
 			text-decoration: none;
 		}
 
-		#quote small {
-			font-size: 30px;
+		.quote small {
+			font-size: 70%;
+		}
+
+		cite {
+			display: block;
+			padding-top: 20px;
+			border-top: 2px solid hsl(0, 0%, 97%);
+			font-size: 16px;
 		}
 
 		.no-wrap {
 			white-space: nowrap;
 		}
+
+		progress {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			-webkit-appearance: none;
+			width: 100%;
+			height: 5px;
+		}
+
+		progress::-webkit-progress-bar {
+			background-color: white;
+		}
+
+		progress.blue::-webkit-progress-value {
+			background-color: #0af;
+		}
+
+		progress.red::-webkit-progress-value {
+			background-color: #c00;
+		}
 	</style>
 </head>
 <body>
-	<div id="emoticons"></div>
-	<div id="quote"></div>
-
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<progress class="blue" max="30" value="0"></progress>
+	<div class="quote" id="quote-0"></div>
+	<div class="quote" id="quote-1"></div>
+	<div class="quote" id="quote-2"></div>
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/xdate.js"></script>
 	<!-- <script src="emoticons.js"></script> -->
-	<script src="quote.js"></script>
+	<script src="js/quote.js"></script>
+	<script src="js/progress.js"></script>
 </body>
 </html>
 
