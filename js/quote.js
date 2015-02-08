@@ -75,7 +75,7 @@ jQuery.get(qodURL, function (data, textStatus) {
 		'https://www.google.com/search?q=' + dummyNode.querySelector('a').innerText
 	);
 	$quote.innerHTML = [
-		'<cite>Goodreads.com</cite>',
+		'<cite>goodreads.com</cite>',
 		'<p><a href="https://www.google.com/search?q=' + dummyNode.querySelector('div:first-child').innerText + '">',
 			dummyNode.querySelector('div:first-child').innerHTML,
 		'</a></p>',
@@ -90,21 +90,21 @@ jQuery.get(qodURL, function (data, textStatus) {
 // theysaidso has really shitty quotes, but I'm keeping this code around for some reason.
 // for inspriting quotes add &category=inspire
 
-var qodURL2 = 'http://api.theysaidso.com/qod?v=' + (new Date().toISOString().substr(0, 10));
-jQuery.get(qodURL2, function (data, textStatus) {
-	var $quote = document.querySelector('#quote-2');
-	$quote.innerHTML = [
-		'<cite>Theysaidso.com</cite>',
-		'<p>',
-			'<a href="http://theysaidso.com/quote/' + data.contents.id + '">',
-				smartQuotes(data.contents.quote),
-			'</a>',
-		'</p>',
-		'<small class="no-wrap">',
-			'<a href="https://www.google.com/search?q=' + data.contents.author + '">',
-				'— ' + data.contents.author,
-			'</a>',
-		'</small>'
-	].join('');
-	setFontSizes($quote);
-});
+// var qodURL2 = 'http://api.theysaidso.com/qod?v=' + (new Date().toISOString().substr(0, 10));
+// jQuery.get(qodURL2, function (data, textStatus) {
+// 	var $quote = document.querySelector('#quote-2');
+// 	$quote.innerHTML = [
+// 		'<cite>theysaidso.com</cite>',
+// 		'<p>',
+// 			'<a href="http://theysaidso.com/quote/' + data.contents.id + '">',
+// 				smartQuotes(data.contents.quote),
+// 			'</a>',
+// 		'</p>',
+// 		'<small class="no-wrap">',
+// 			'<a href="https://www.google.com/search?q=' + data.contents.author + '">',
+// 				'— ' + data.contents.author,
+// 			'</a>',
+// 		'</small>'
+// 	].join('');
+// 	setFontSizes($quote);
+// });
