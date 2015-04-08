@@ -34,7 +34,6 @@
 		}
 
 		.quote {
-			display: none;
 			position: absolute;
 			top: 50%;
 			left: 0;
@@ -65,112 +64,14 @@
 		.no-wrap {
 			white-space: nowrap;
 		}
-
-
-		label {
-			cursor: pointer;
-			display: inline-block;
-			width: 30px;
-			height: 30px;
-			border-radius: 50%;
-			border: 1px solid #ddd;
-			box-shadow: inset 0 0 0 7px white;
-		}
-
-		:checked + label {
-			background: #ddd;
-		}
-
-		[type=radio] {
-			display: none;
-		}
-
-		#radio-quote-0:checked ~ #quote-0 {
-			display: block;
-		}
-
-		#radio-quote-1:checked ~ #quote-1 {
-			display: block;
-		}
-
-		#radio-quote-2:checked ~ #quote-2 {
-			display: block;
-		}
-
-		#thirtyday {
-			white-space: nowrap;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			font-size: 10px;
-			height: 12px;
-			line-height: 12px;
-			text-align: center;
-			background: #ddd;
-			border-bottom: 1px solid #ddd;
-		}
-
-		progress {
-			-webkit-appearance: none;
-			width: 1230px;
-			height: 12px;
-			vertical-align: top;
-		}
-
-		progress:after {
-			content: "";
-			display: block;
-			height: 12px;
-			margin-top: -12px;
-			background-image: linear-gradient(
-				to right,
-				transparent,
-				transparent 97%,
-				hsl(0, 0%, 95%) 97%,
-				hsl(0, 0%, 95%));
-			background-position: 0% 0%;
-			background-size: 41px 12px;
-			background-repeat: repeat-x;
-		}
-
-		progress::-webkit-progress-bar {
-			background-color: white;
-		}
-
-		progress::-webkit-progress-value {
-			background-color: rgba(0, 0, 0, 0.08);
-			box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.08);
-		}
-
-		progress.blue::-webkit-progress-value {
-			background-color: #0af;
-		}
-
-		progress.red::-webkit-progress-value {
-			background-color: #c00;
-		}
 	</style>
 </head>
 <body>
-	<div id="thirtyday">
-		0 <progress max="30" value="0"></progress> 30
-	</div>
 	<div id="quotes">
-		<input type="radio" name="switch" id="radio-quote-0" checked>
-		<label for="radio-quote-0"></label>
-		<input type="radio" name="switch" id="radio-quote-1">
-		<label for="radio-quote-1"></label>
-		<!-- <input type="radio" name="switch" id="radio-quote-2">
-		<label for="radio-quote-2"></label> -->
 		<div class="quote" id="quote-0"></div>
-		<div class="quote" id="quote-1"></div>
-		<div class="quote" id="quote-2"></div>
 	</div>
 	<script src="js/lib/jquery.min.js"></script>
-	<script src="js/lib/xdate.js"></script>
 	<script src="js/quote.js"></script>
-	<script src="js/progress.js"></script>
 </body>
 </html>
 
