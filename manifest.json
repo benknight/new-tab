@@ -1,5 +1,5 @@
 {
-	"name": "Custom New Tab Page",
+	"name": "Reddit QOD Custom New Tab Page",
 	"description": "Override the new tab page with this one",
 	"version": "0.1",
 	"incognito": "split",
@@ -8,8 +8,6 @@
 	},
 	"manifest_version": 2,
 	"permissions": [
-		"https://www.goodreads.com/",
-		"http://api.theysaidso.com/",
 		"http://www.reddit.com/"
 	]
 }
