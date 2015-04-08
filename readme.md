@@ -1,6 +1,4 @@
-# Benjamin Knight's New Tab
-> Replace the default new tab with something better and completely pointless.
-
-Show's a 30 day progress bar along with quotes of the day from [r/quotes](http://reddit.com/r/quotes) and goodreads.com
+# Reddit Quote-of-the-Day Chrome New Tab
+> Replace the default new tab with the top quote on [r/quotes](http://reddit.com/r/quotes).
 
 ![Screenshot](/screenshot.png)
