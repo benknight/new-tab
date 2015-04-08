@@ -46,9 +46,9 @@ function setFontSizes ($quote) {
 var qodURL1 = 'http://www.reddit.com/r/quotes/.json?v=' + (new Date().toISOString().substr(0, 13));
 
 jQuery.get(qodURL1, function (data, textStatus) {
-	var $quote = document.querySelector('#quote-1');
+	var $quote = document.querySelector('#quote-0');
 	// var randomIndex = Math.ceil(Math.random() * 6);
-	var quoteData = data.data.children[1].data;
+	var quoteData = data.data.children[0].data;
 	$quote.innerHTML = [
 		'<cite>r/quotes</cite>',
 		'<p>',
@@ -66,7 +66,7 @@ jQuery.get(qodURL1, function (data, textStatus) {
 var qodURL = 'https://www.goodreads.com/quotes_of_the_day/rss';
 
 jQuery.get(qodURL, function (data, textStatus) {
-	var $quote = document.querySelector('#quote-0');
+	var $quote = document.querySelector('#quote-1');
 	var item = data.querySelector('item');
 	var dummyNode = document.createElement('div');
 	dummyNode.innerHTML = item.querySelector('description').textContent;

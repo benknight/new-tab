@@ -1,5 +1,8 @@
 (function () {
-	var start = new XDate(2015, 0, 21);
+	var year = 2015,
+			month = 4,
+			day = 1;
+	var start = new XDate(year, month - 1, day);
 	var daysSinceStart = start.diffDays();
 	$(document.body).ready(function () {
 		$('progress')
