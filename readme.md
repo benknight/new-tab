@@ -1,5 +1,6 @@
-# Reddit Quote-of-the-Day Chrome New Tab
+# r/Quotes New Tab
 > Replace the default new tab with the top quote on [r/quotes](http://reddit.com/r/quotes).
 
-![Screenshot](/screenshot.png)
---
+| Screenshot  |
+| --- |
+| ![Screenshot](/screenshot.png)  |
