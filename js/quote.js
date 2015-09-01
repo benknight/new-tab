@@ -45,10 +45,13 @@ function setFontSizes ($quote) {
 
 var qodURL1 = 'http://www.reddit.com/r/quotes/.json?v=' + (new Date().toISOString().substr(0, 13));
 
-jQuery.get(qodURL1, function (data, textStatus) {
+jQuery.get(qodURL1, function (resp, textStatus) {
 	var $quote = document.querySelector('#quote-0');
 	// var randomIndex = Math.ceil(Math.random() * 6);
-	var quoteData = data.data.children[0].data;
+	var filteredQuotes = resp.data.children.filter(function (quote) {
+		return ! quote.data.stickied;
+	});
+	var quoteData = filteredQuotes[0].data;
 	$quote.innerHTML = [
 		'<cite>r/quotes</cite>',
 		'<p>',
