@@ -44,13 +44,19 @@ function setFontSizes($quote) {
   }
 }
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
 // --- r/quotes ---
 
 // show a random quote from the top 6 hot posts on r/quotes.
 // cache is broken once an hour
 
 const qodURL1 =
-  "http://www.reddit.com/r/quotes/.json?v=" +
+  "https://www.reddit.com/r/quotes/.json?v=" +
   new Date().toISOString().substr(0, 13);
 
 jQuery.get(qodURL1, function (resp, textStatus) {
@@ -59,9 +65,9 @@ jQuery.get(qodURL1, function (resp, textStatus) {
   const filteredQuotes = resp.data.children.filter(function (quote) {
     return !quote.data.stickied;
   });
-  const quoteData = filteredQuotes[0].data;
+  const quoteData = filteredQuotes[getRandomInt(0, 3)].data;
   $quote.innerHTML = `
-    <cite>r/quotes</cite>
+    <cite>u/${quoteData.author}</cite>
     <p>
       <a href="${quoteData.url}">
       ${smartQuotes(hyphenToDash(quoteData.title))}
